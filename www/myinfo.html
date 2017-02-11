@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>BIDMC myHEART</title>
+	
+
+	
+	<!-- Specify a stylesheet -->
+
+	<link rel="stylesheet" href="css/default.css" title="style" media="screen" type="text/css" />
+
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+	
+	<!--
+	<meta name="viewport" content="width=device-width, initial-scale=2.0">
+	-->
+	<link rel="icon" href="img/favicon-16x16.png">
+	
+	<script language="javascript">
+		$( document ).ready(function() {
+			
+			if (localStorage.initial1 != null) {
+				$('#initial1 option:contains(' + localStorage.initial1 + ')').prop({selected: true});
+			}
+			
+			if (localStorage.initial2 != null) {
+				$('#initial2 option:contains(' + localStorage.initial2 + ')').prop({selected: true});
+			}
+			
+			if (localStorage.md != null) {
+				$('#md option:contains(' + localStorage.md + ')').prop({selected: true});
+			}
+			
+			if (localStorage.midlevel != null) {
+				$('#midlevel option:contains(' + localStorage.midlevel + ')').prop({selected: true});
+			}	
+
+		});
+	</script>
+	
+<!-- if browser is IE < version 9, teach it about new HTML5 elements -->
+<!--[if lt IE 9]>
+<script>
+  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+    "progress,section,time,video").split(',');
+  for (var i = 0; i < e.length; i++) {
+    document.createElement(e[i]);
+  }
+</script>
+<![endif]-->
+</head>
+
+<div class="main">
+
+<img src ="img/logo.png" />
+<h1>My information</h1>
+
+
+<form name="myinfo">
+<h2>My Initials:<h2>
+<div id="initialsdiv">
+<select id="initial1" name="initial1" onchange="localStorage.setItem('initial1',this.value);">
+	<option>A</option>
+	<option>B</option>
+	<option>C</option>
+	<option>D</option>
+	<option>E</option>
+	<option>F</option>
+	<option>G</option>
+	<option>H</option>
+	<option>I</option>
+	<option>J</option>
+	<option>K</option>
+	<option>L</option>
+	<option>M</option>
+	<option>N</option>
+	<option>O</option>
+	<option>P</option>
+	<option>Q</option>
+	<option>R</option>
+	<option>S</option>
+	<option>T</option>
+	<option>V</option>
+	<option>W</option>
+	<option>X</option>
+	<option>Y</option>
+	<option>Z</option>
+</select>
+<select id="initial2" name="initial2" onchange="localStorage.setItem('initial2',this.value);">
+	<option>A</option>
+	<option>B</option>
+	<option>C</option>
+	<option>D</option>
+	<option>E</option>
+	<option>F</option>
+	<option>G</option>
+	<option>H</option>
+	<option>I</option>
+	<option>J</option>
+	<option>K</option>
+	<option>L</option>
+	<option>M</option>
+	<option>N</option>
+	<option>O</option>
+	<option>P</option>
+	<option>Q</option>
+	<option>R</option>
+	<option>S</option>
+	<option>T</option>
+	<option>V</option>
+	<option>W</option>
+	<option>X</option>
+	<option>Y</option>
+	<option>Z</option>
+</select>
+</div>
+
+<h2>My Doctor:</h2>
+<select id="md" name="md" onchange="localStorage.setItem('md',this.value);">
+	<option>None selected</option>
+	<option>Anter</option>
+	<option>Appelbaum</option>
+	<option>Buxton</option>
+	<option>Chang</option>
+	<option>Contreras</option>
+	<option>Cutlip</option>
+	<option>Feinberg</option>
+	<option>Fish</option>
+	<option>Fleming</option>
+	<option>Gavin</option>
+	<option>Gelfand</option>
+	<option>Gerszten</option>
+	<option>Gibson</option>
+	<option>Grandin</option>
+	<option>Haffajee</option>
+	<option>Hauser</option>
+	<option>Ho</option>
+	<option>Kang</option>
+	<option>Kannam</option>
+	<option>Kociol</option>
+	<option>Kramer</option>
+	<option>Laham</option>
+	<option>Leeman</option>
+	<option>Manning</option>
+	<option>Mittleman</option>
+	<option>Oettgen</option>
+	<option>Osborn</option>
+	<option>Papageorgiou</option>
+	<option>Pinto</option>
+	<option>Popma</option>
+	<option>Quintero</option>
+	<option>Rasmussen</option>
+	<option>Riley</option>
+	<option>Sabe</option>
+	<option>Shubrooks</option>
+	<option>Waks</option>
+	<option>Welty</option>
+	<option>Yeh</option>
+	<option>York</option>
+	<option>Zimetbaum</option>
+</select>
+
+<h2>My Nurse:</h2>
+<select id="midlevel" name="midlevel"  onchange="localStorage.setItem('midlevel',this.value);">
+	<option>None selected</option>
+	<option>I don't have a nurse</option>
+	<option>Jaqueline Chasse</option>
+	<option>Cindy Cunningham</option>
+	<option>Monique Nestor</option>
+</select>
+
+
+</form>
+
+<a href="index.html">Save Data</a>
+<a href="index.html">Home</a>
+
+</div>
+
+
+</body>
+
+</html>
